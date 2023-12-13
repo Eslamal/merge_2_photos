@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageHolder"
+        android:layout_width="371dp"
+        android:layout_height="134dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <Button
+        android:id="@+id/btnPick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageHolder"
+        android:layout_marginTop="16dp"
+        android:text="Pick Image" />
+
+    <SeekBar
+        android:id="@+id/seekQuality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPick"
+        android:layout_marginTop="16dp"
+        android:max="100"
+        android:progress="40" />
+
+    <TextView
+        android:id="@+id/txtQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekQuality"
+        android:layout_marginTop="8dp"
+        android:text="Quality: 40%"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/txtHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtQuality"
+        android:layout_marginTop="16dp"
+        android:hint="Height"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/txtWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeight"
+        android:layout_marginTop="8dp"
+        android:hint="Width"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnCompress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtWidth"
+        android:layout_marginTop="16dp"
+        android:text="Compress" />
+
+    <ImageView
+        android:id="@+id/imageOutput"
+        android:layout_width="380dp"
+        android:layout_height="139dp"
+        android:layout_below="@id/btnCompress"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/txtOriginalSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageOutput"
+        android:layout_marginTop="8dp"
+        android:text="Original Size: "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtResultSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtOriginalSize"
+        android:layout_marginTop="8dp"
+        android:text="Result Size: "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/versionInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtResultSize"
+        android:layout_marginTop="8dp"
+        android:text="Version: "
+        android:textSize="16sp" />
+
+</RelativeLayout>
